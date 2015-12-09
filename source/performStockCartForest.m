@@ -34,10 +34,10 @@ for forestSize = forestSizes
         profits(i, forestSize) = accumProfit;
         rois(i, forestSize)    = accumProfit / amountInvested; 
         
-        y_hat_train = predictForest(model, x_train);
-        errors_train(i, forestSize) = mean(y_train ~= y_hat_train);
+        y_hat = predictForest(model, x_train);
+        errors_train(i, forestSize) = mean(y_train ~= y_hat);
                 
-        % Print summary        
+        % Print summary; where did the model work? where did it lead me astray.        
         iterElapsed = toc(iterStart);
         fprintf('    E_train: %f\n',   errors_train(i, forestSize));
         fprintf('    E_test:  %f\n', errors_test (i, forestSize));
@@ -83,5 +83,5 @@ hold off;
 toc;
 
 
-end
+end    % END of fn: performStockCartForest
 

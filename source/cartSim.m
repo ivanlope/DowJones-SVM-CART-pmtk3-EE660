@@ -104,6 +104,8 @@ qt2test_y  = qt2data(test_idxs, test_cols);
 fprintf(' Mean profit (ROI) from quarter 2 model: $%.2f (%.3f%%)\n\n', qt2profit, qt2roi*100);
 
 
+
+
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 % Use quarter 1 data to predict quarter 2 actions
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
